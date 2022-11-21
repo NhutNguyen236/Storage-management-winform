@@ -42,7 +42,7 @@
             this.txtTenKhach = new System.Windows.Forms.TextBox();
             this.cbxMaNhanVien = new System.Windows.Forms.ComboBox();
             this.dtpNgayBan = new System.Windows.Forms.DateTimePicker();
-            this.txtMaHoaDon = new System.Windows.Forms.TextBox();
+            this.txtMaHoaDonBan = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -109,6 +109,7 @@
             this.btnTimKiem.TabIndex = 29;
             this.btnTimKiem.Text = "&Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label16
             // 
@@ -126,6 +127,7 @@
             this.cbxMaHoaDon.Name = "cbxMaHoaDon";
             this.cbxMaHoaDon.Size = new System.Drawing.Size(291, 28);
             this.cbxMaHoaDon.TabIndex = 27;
+            this.cbxMaHoaDon.DropDown += new System.EventHandler(this.cbxMaHoaDon_DropDown);
             // 
             // splitContainer1
             // 
@@ -165,7 +167,7 @@
             this.groupBox1.Controls.Add(this.txtTenKhach);
             this.groupBox1.Controls.Add(this.cbxMaNhanVien);
             this.groupBox1.Controls.Add(this.dtpNgayBan);
-            this.groupBox1.Controls.Add(this.txtMaHoaDon);
+            this.groupBox1.Controls.Add(this.txtMaHoaDonBan);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -188,7 +190,7 @@
             this.cbxMaKhachHang.Name = "cbxMaKhachHang";
             this.cbxMaKhachHang.Size = new System.Drawing.Size(291, 28);
             this.cbxMaKhachHang.TabIndex = 26;
-            this.cbxMaKhachHang.SelectedIndexChanged += new System.EventHandler(this.cbxMaKhachHang_SelectedIndexChanged);
+            this.cbxMaKhachHang.TextChanged += new System.EventHandler(this.cbxMaKhachHang_TextChanged);
             // 
             // mtbDienThoai
             // 
@@ -231,7 +233,7 @@
             this.cbxMaNhanVien.Name = "cbxMaNhanVien";
             this.cbxMaNhanVien.Size = new System.Drawing.Size(291, 28);
             this.cbxMaNhanVien.TabIndex = 23;
-            this.cbxMaNhanVien.SelectedIndexChanged += new System.EventHandler(this.cbxMaNhanVien_SelectedIndexChanged);
+            this.cbxMaNhanVien.TextChanged += new System.EventHandler(this.cbxMaNhanVien_TextChanged);
             // 
             // dtpNgayBan
             // 
@@ -242,14 +244,14 @@
             this.dtpNgayBan.TabIndex = 14;
             this.dtpNgayBan.ValueChanged += new System.EventHandler(this.dtpNgayBan_ValueChanged);
             // 
-            // txtMaHoaDon
+            // txtMaHoaDonBan
             // 
-            this.txtMaHoaDon.Location = new System.Drawing.Point(159, 32);
-            this.txtMaHoaDon.Name = "txtMaHoaDon";
-            this.txtMaHoaDon.ReadOnly = true;
-            this.txtMaHoaDon.Size = new System.Drawing.Size(291, 27);
-            this.txtMaHoaDon.TabIndex = 11;
-            this.txtMaHoaDon.TextChanged += new System.EventHandler(this.txtMaHoaDon_TextChanged);
+            this.txtMaHoaDonBan.Location = new System.Drawing.Point(159, 32);
+            this.txtMaHoaDonBan.Name = "txtMaHoaDonBan";
+            this.txtMaHoaDonBan.ReadOnly = true;
+            this.txtMaHoaDonBan.Size = new System.Drawing.Size(291, 27);
+            this.txtMaHoaDonBan.TabIndex = 11;
+            this.txtMaHoaDonBan.TextChanged += new System.EventHandler(this.txtMaHoaDon_TextChanged);
             // 
             // label9
             // 
@@ -436,6 +438,7 @@
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "&Hủy Hóa Đơn";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -568,7 +571,7 @@
             this.cbxMaHang.Name = "cbxMaHang";
             this.cbxMaHang.Size = new System.Drawing.Size(144, 28);
             this.cbxMaHang.TabIndex = 26;
-            this.cbxMaHang.SelectedIndexChanged += new System.EventHandler(this.cbxMaHang_SelectedIndexChanged);
+            this.cbxMaHang.TextChanged += new System.EventHandler(this.cbxMaHang_TextChanged);
             // 
             // label10
             // 
@@ -625,7 +628,6 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox txtMaHoaDon;
         private DateTimePicker dtpNgayBan;
         private TextBox txtTenNhanVien;
         private ComboBox cbxMaNhanVien;
@@ -662,5 +664,6 @@
         private Button btnLuu;
         private Button btnThem;
         private ComboBox cbxMaKhachHang;
+        public TextBox txtMaHoaDonBan;
     }
 }

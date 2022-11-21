@@ -294,7 +294,7 @@ namespace QuanLyBanHang.Class
             //Xóa ký tự trắng và PM hoặc AM
             partsTime[2] = partsTime[2].Remove(2, 3);
             string t;
-            t = String.Format("_{0}{1}{2}", partsTime[0], partsTime[1], partsTime[2]);
+            t = String.Format("{0}{1}{2}", partsTime[0], partsTime[1], partsTime[2]);
             key = key + t;
             return key;
         }

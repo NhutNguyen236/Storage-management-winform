@@ -219,5 +219,10 @@ namespace QuanLyBanHang
         {
             this.Close();
         }
+
+        private void dgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

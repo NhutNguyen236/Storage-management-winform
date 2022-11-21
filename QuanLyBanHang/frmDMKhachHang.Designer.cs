@@ -155,6 +155,7 @@
             this.dgvKhachHang.RowTemplate.Height = 29;
             this.dgvKhachHang.Size = new System.Drawing.Size(1074, 372);
             this.dgvKhachHang.TabIndex = 2;
+            this.dgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellContentClick);
             this.dgvKhachHang.Click += new System.EventHandler(this.dgvKhachHang_Click);
             // 
             // panel2
